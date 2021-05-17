@@ -61,7 +61,7 @@ class Aliyun(BaseTask):
 
     @staticmethod
     def get_events():
-        clt = client.AcsClient('LTAI4G5gnbDbjy6do9n2qzrm', 'jC1iECuh6MVOSN7RNcTxCTWAFgVeTt', 'cn-shenzhen')
+        clt = client.AcsClient('', '', 'cn-shenzhen')
 
         request = LookupEventsRequest.LookupEventsRequest()
         response = clt.do_action_with_exception(request)
