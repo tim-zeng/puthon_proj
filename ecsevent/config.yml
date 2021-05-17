@@ -1,0 +1,43 @@
+# -*- coding:utf-8 -*-
+#: External service configuration
+SRV:
+  #: Aliyun
+  ALIYUN:
+    AK: 'LTAI4G5gnbDbjy6do9n2qzrm'
+    SECRET: 'jC1iECuh6MVOSN7RNcTxCTWAFgVeTt'
+
+#: application config.yml file
+APP:
+  NAME: ECS_event
+  DEBUG: false
+  HOST: 0.0.0.0
+  PORT: 8000
+  WORKS: 8
+  SECRET_KEY: 68ee8d14dac7cf2e73da1a2855e10695
+
+  #: RQ
+  RQ_REDIS_URL: redis://:tim1234@127.0.0.1:6379/4
+  RQ_SCHEDULER_INTERVAL: 1
+  RQ_SCHEDULER_CLASS: "ecs.tasks.Scheduler"
+  RQ_ASYNC: true
+
+#192.168.70.120:6379/6
+  #: Cache
+  CACHE_TYPE: redis
+  CACHE_KEY_PREFIX: "CACHING:"
+  CACHE_REDIS_URL: redis://:tim1234@127.0.0.1:6379/6
+
+DB:
+  #: default main database configuration
+  DEFAULT:
+    NAME: "ecs_events"
+    USER: root
+    AUTH: "tim1234"
+    HOST: "127.0.0.1"
+    #NAME: privilege
+    #USER: root
+    #AUTH: "sqlpass"
+    #HOST: "localhost"
+    PORT: 3306
+    CHARSET: utf8
+
